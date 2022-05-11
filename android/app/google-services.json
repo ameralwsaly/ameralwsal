@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "89219613151",
+    "project_id": "shope12-168ef",
+    "storage_bucket": "shope12-168ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89219613151:android:89cc90bfbf1e15f9a3c46a",
+        "android_client_info": {
+          "package_name": "com.tharwatsamy.buy_it"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89219613151-7j3qeklpudbagj44ptn79imppiho9qqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK8dIddmZ7uqk_P8-oE95rfwdz0F4l6tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89219613151-7j3qeklpudbagj44ptn79imppiho9qqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
