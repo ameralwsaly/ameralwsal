@@ -6,6 +6,7 @@ import 'package:buy_it/provider/cartItem.dart';
 import 'package:buy_it/screens/user/productInfo.dart';
 import 'package:buy_it/services/store.dart';
 import 'package:buy_it/widgets/custom_menu.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -60,10 +61,8 @@ class CartScreen extends StatelessWidget {
                           height: screenHeight * .15,
                           child: Row(
                             children: <Widget>[
-                              CircleAvatar(
-                                radius: screenHeight * .15 / 2,
-                                backgroundImage:
-                                    AssetImage(products[index].pimage),
+                              CachedNetworkImage(
+                                imageUrl: products[index].pimage,
                               ),
                               Expanded(
                                 child: Row(

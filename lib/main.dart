@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
             ],
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              initialRoute: isUserLoggedIn ? HomePage.id : LoginScreen.id,
+              initialRoute: isUserLoggedIn ? LoginScreen.id : LoginScreen.id,
               routes: {
                 OrderDetails.id: (context) => OrderDetails(),
                 OrdersScreen.id: (context) => OrdersScreen(),

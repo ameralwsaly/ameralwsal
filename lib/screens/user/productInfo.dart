@@ -2,6 +2,7 @@ import 'package:buy_it/constants.dart';
 import 'package:buy_it/models/product.dart';
 import 'package:buy_it/provider/cartItem.dart';
 import 'package:buy_it/screens/user/CartScreen.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -22,9 +23,9 @@ class _ProductInfoState extends State<ProductInfo> {
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: Image(
-              fit: BoxFit.fill,
-              image: AssetImage(product.pimage),
+            child: CachedNetworkImage(
+              fit: BoxFit.fitWidth,
+              imageUrl: product.pimage,
             ),
           ),
           Padding(
@@ -56,7 +57,7 @@ class _ProductInfoState extends State<ProductInfo> {
                   child: Container(
                     color: Colors.white,
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * .3,
+                    height: MediaQuery.of(context).size.height * .30,
                     child: Padding(
                       padding: const EdgeInsets.all(20),
                       child: Column(

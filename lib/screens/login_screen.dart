@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final _auth = Auth();
 
-  final adminPassword = 'Admin1234';
+  final adminPassword = 'ameralwsaly';
 
   bool keepMeLoggedIn = false;
 

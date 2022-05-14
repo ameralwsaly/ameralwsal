@@ -35,32 +35,6 @@ class _HomePageState extends State<HomePage> {
         DefaultTabController(
           length: 4,
           child: Scaffold(
-            // bottomNavigationBar: BottomNavigationBar(
-            //   type: BottomNavigationBarType.fixed,
-            //   unselectedItemColor: kUnActiveColor,
-            //   currentIndex: _bottomBarIndex,
-            //   fixedColor: kMainColor,
-            //   onTap: (value) async {
-            //     if (value == 2) {
-            //       SharedPreferences pref =
-            //           await SharedPreferences.getInstance();
-            //       pref.clear();
-            //       await _auth.signOut();
-            //       Navigator.popAndPushNamed(context, LoginScreen.id);
-            //     }
-            //     setState(() {
-            //       _bottomBarIndex = value;
-            //     });
-            //   },
-            //   items: [
-            //     BottomNavigationBarItem(
-            //         title: Text('Test'), icon: Icon(Icons.person)),
-            //     BottomNavigationBarItem(
-            //         title: Text('Test'), icon: Icon(Icons.person)),
-            //     BottomNavigationBarItem(
-            //         title: Text('Sign Out'), icon: Icon(Icons.close)),
-            //   ],
-            // ),
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
