@@ -80,6 +80,7 @@ class _HomePageState extends State<HomePage> {
             body: TabBarView(
               children: <Widget>[
                 jacketView(),
+                ProductsView(kJackets, _products),
                 ProductsView(kTrousers, _products),
                 ProductsView(kTshirts, _products),
                 ProductsView(kShoes, _products),
@@ -164,12 +165,12 @@ class _HomePageState extends State<HomePage> {
                 child: Stack(
                   children: <Widget>[
                     Positioned.fill(
-                      child:CachedNetworkImage(
-                          imageUrl: products[index].pimage,
-                          placeholder: (context, url) =>
-                              CircularProgressIndicator(),
-                          errorWidget: (context, url, error) => Icon(Icons.error),
-                        ),
+                      child: CachedNetworkImage(
+                        imageUrl: products[index].pimage,
+                        placeholder: (context, url) =>
+                            CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => Icon(Icons.error),
+                      ),
                     ),
                     Positioned(
                       bottom: 0,

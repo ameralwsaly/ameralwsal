@@ -1,5 +1,6 @@
 import 'package:buy_it/models/product.dart';
 import 'package:buy_it/screens/user/productInfo.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../functions.dart';
@@ -22,9 +23,8 @@ Widget ProductsView(String pCategory, List<Product> allProducts) {
         child: Stack(
           children: <Widget>[
             Positioned.fill(
-              child: Image(
-                fit: BoxFit.fill,
-                image: AssetImage(products[index].pimage),
+              child: CachedNetworkImage(
+                imageUrl: products[index].pimage,
               ),
             ),
             Positioned(

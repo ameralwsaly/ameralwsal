@@ -92,8 +92,8 @@ class _HomePage22State extends State<HomePage22> {
               children: <Widget>[
                 jacketView(),
                 ProductsView(kTrousers, _products),
-                ProductsView(kShoes, _products),
                 ProductsView(kTshirts, _products),
+                ProductsView(kShoes, _products),
               ],
             ),
           ),

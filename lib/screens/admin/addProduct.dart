@@ -23,6 +23,14 @@ class AddProduct extends StatefulWidget {
 
 class _AddProductState extends State<AddProduct> {
   String _name, _price, _description, _category, _pimage;
+  String choseValue;
+  List<String> category = [
+    'jackets',
+    'trousers',
+    't-shirts',
+    'shoes',
+  ];
+
   File _image;
   String _url;
   bool isloading = false;
@@ -55,7 +63,8 @@ class _AddProductState extends State<AddProduct> {
                   hint: 'Product Name',
                   onClick: (value) {
                     _name = value;
-                  }, icon: null,
+                  },
+                  icon: null,
                 ),
                 SizedBox(
                   height: 10,
@@ -74,17 +83,52 @@ class _AddProductState extends State<AddProduct> {
                   onClick: (value) {
                     _description = value;
                   },
-                  hint: 'Product Description', icon: null,
+                  hint: 'Product Description',
+                  icon: null,
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                CustomTextField(
-                  onClick: (value) {
-                    _category = value;
-                  },
-                  hint: 'Product Category', icon: null,
+                Center(
+                  child: SizedBox(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Card(
+                        elevation: 10,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: DropdownButton(
+                            focusColor: Colors.grey,
+                            elevation: 10,
+                            isExpanded: true,
+                            value: _category,
+                            items: category.map(
+                              (value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(value),
+                                );
+                              },
+                            ).toList(),
+                            onChanged: (String value) {
+                              setState(() {
+                                _category = value;
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
+                // CustomTextField(
+                //   onClick: (value) {
+                //     _category = value;
+                //   },
+                //   hint: 'Product Category', icon: null,
+                // ),
                 SizedBox(
                   height: 10,
                 ),
@@ -118,14 +162,6 @@ class _AddProductState extends State<AddProduct> {
                     ),
                   ],
                 ),
-
-                /* CustomTextField(
-                  onClick: (value) {
-                    _imageLocation = value;
-                  },
-                  hint: 'Product Location',
-                ),
-                */ //
                 SizedBox(
                   height: 20,
                 ),
